@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://coolak.github.io/openai-daybreak-persona-id-gap/sitemap.xml

@@ -1,0 +1,59 @@
+{
+  "schema": "incident-state/v1",
+  "incident": "OpenAI Daybreak identity verification offers no usable document to a Russian citizen lawfully resident in Japan",
+  "updated": "2026-11-04",
+  "timezone": "UTC",
+  "status": "unresolved",
+  "component": {
+    "product": "OpenAI Daybreak (Trusted Access for Cyber), individual access",
+    "verification_vendor": "Persona",
+    "account_security": "Advanced Account Security with two physical YubiKeys from the OpenAI + Yubico bundle"
+  },
+  "evidence": {
+    "basis": "account-owner observation of the Persona flow; OpenAI Help Center support-assistant replies",
+    "persona_country_russia": "We're unable to verify IDs from this country.",
+    "persona_country_japan": "Only driver's license or passport offered; no residence card option",
+    "owner_documents": "Japanese Residence Card; no Japanese driver's license or passport usable for this check",
+    "support_assistant_statements": [
+      "the document types can include residence permits",
+      "Support can't override the verification decision or force a manual review",
+      "Daybreak also isn't available in every region"
+    ],
+    "official_article": "https://help.openai.com/en/articles/20001259-troubleshooting-openai-daybreak",
+    "nationality_rule_established": false,
+    "document_configuration_gap_established": false,
+    "alternative_path_offered": false,
+    "screenshot_published": false
+  },
+  "timeline": [
+    { "date": "before 2026-11-04", "event": "Persona rejects Russian-issued IDs; Japan path offers only driver's license or passport" },
+    { "at": "2026-11-04T06:30:00Z", "time_basis": "approximate", "event": "Support request sent through the Help Center support chat" },
+    { "at": "2026-11-04T06:31:00Z", "time_basis": "approximate", "event": "Support assistant: residence permits can be included; no override; not available in every region" },
+    { "at": "2026-11-04T06:36:00Z", "time_basis": "approximate", "event": "Follow-up describing both Persona paths" },
+    { "at": "2026-11-04T06:38:00Z", "time_basis": "approximate", "event": "Escalated to a support specialist; reply promised in the coming days and by email" }
+  ],
+  "reports": {
+    "support": {
+      "channel": "OpenAI Help Center ChatKit AI support assistant",
+      "status": "escalated_to_support_specialist",
+      "reply_window": "coming days",
+      "email_reply_route_confirmed_by_assistant": true,
+      "actual_human_response_verified": false,
+      "case_id_verified": false,
+      "resolution_verified": false
+    },
+    "repository": { "url": "https://github.com/COOLak/openai-daybreak-persona-id-gap" },
+    "pages": { "url": "https://coolak.github.io/openai-daybreak-persona-id-gap/" },
+    "owner_issue": { "url": "https://github.com/COOLak/openai-daybreak-persona-id-gap/issues/1", "state": "open" }
+  },
+  "requested_owner_actions": [
+    "State whether individual Daybreak access excludes Russian citizens resident in supported countries, and cite the rule",
+    "Show any nationality or region limit on the eligibility page before hardware-key and Advanced Account Security setup",
+    "Explain why the Japan path omits the Japanese Residence Card despite residence permits being acceptable",
+    "Provide a supported alternative: residence-permit path, manual review or organization-level verification"
+  ],
+  "privacy": {
+    "excluded": ["Names", "Account and contact identifiers", "Residence-card images and numbers", "Full support transcript", "Credentials"]
+  },
+  "vendor_fix": null
+}
